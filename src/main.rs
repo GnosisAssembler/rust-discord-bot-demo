@@ -14,13 +14,27 @@ impl EventHandler for Handler {
     // Event handlers are dispatched through a threadpool, and so multiple
     // events can be dispatched simultaneously.
     fn message(&self, _: Context, msg: Message) {
-        if msg.content == "!ping" {
+        if msg.content == "!help" {
             // Sending a message can fail, due to a network error, an
             // authentication error, or lack of permissions to post in the
             // channel, so log to stdout when some error happens, with a
             // description of it.
-            if let Err(why) = msg.channel_id.say("Pong!") {
+            if let Err(why) = msg.channel_id.say("Noone is gonna help you rusty boi!") {
                 println!("Error sending message: {:?}", why);
+            }
+        }
+
+        if msg.content == "!messageme" {
+            // If the `methods` feature is enabled, then model structs will
+            // have a lot of useful methods implemented, to avoid using an
+            // often otherwise bulky Context, or even much lower-level `rest`
+            // method.
+            //
+            // In this case, you can direct message a User directly by simply
+            // calling a method on its instance, with the content of the
+            // message.
+            if let Err(why) = msg.author.dm(|m| m.content("Hello!")) {
+                println!("Error when direct messaging user: {:?}", why);
             }
         }
     }
