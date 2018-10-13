@@ -38,7 +38,7 @@ impl EventHandler for Handler {
 
 fn main() {
     // Configure the client with your Discord bot token in the environment.
-    let token = env::var("DISCORD_TOKEN")
+    let token = env::var("NTAwNjk4NjkxMjQyMjk1MzE3.DqOnyw.PE7BuYGXODxcOI0ZnS_0rvN_oQY")
         .expect("Expected a token in the environment");
 
     // Create a new instance of the Client, logging in as a bot. This will
