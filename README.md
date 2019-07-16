@@ -1,5 +1,7 @@
 # rust-discord-bot-demo
 
+![project template](https://img.shields.io/badge/project-template-blue.svg?style=flat-square)
+
 > A discord bot template in rust, using [Serenity](https://github.com/serenity-rs/serenity).
 
 Serenity is a Rust library for the Discord API, which requires openssl in order to work.
