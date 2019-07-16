@@ -19,4 +19,4 @@ If something is unclear, wrong, or needs to be refactored, please let us know. P
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details..
